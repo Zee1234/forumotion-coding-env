@@ -1,8 +1,8 @@
 link(rel="stylesheet", href="index.styl")
 .my-container
 	.my-title.my-name Jamie Delamore
-	.my-info
-		.my-title Basic Information
+	.my-box.my-info
+		.my-title Basics
 		.my-details
 			span.my-red.my-bold Age
 			span 25
@@ -18,14 +18,67 @@ link(rel="stylesheet", href="index.styl")
 			br
 			span.my-red.my-bold Weight
 			span 180
-	.my-long-info
+			br
+			span.my-orange.my-bold Likes
+			span Likes here
+			br
+			span.my-orange.my-bold Dislikes
+			span Dislikes here
+	.my-box.my-long-info
 		.my-title About
 		.my-details
 			span.my-red.my-bold Appearance
-			span Appearance goes here
+			span= lorem.generateParagraphs(3)
 			br
 			span.my-red.my-bold Personality
-			span Personality goes here
+			span= lorem.generateParagraphs(3)
 			br
 			span.my-red.my-bold History
-			span
+			span= lorem.generateParagraphs(5)
+	.my-box.my-ninja-info
+		.my-title Ninja Traits
+		.my-details
+			span.my-green.my-bold Rank
+			span D-Rank
+			br
+			span.my-green.my-bold Village
+			span Missing-nin
+			br
+			span.my-green.my-bold Element(s)
+			span Fire
+			br
+			span.my-green.my-bold Specialities
+			span Taijutsu
+			br
+			span.my-green.my-bold Clan
+			span None
+	.my-box.my-stats
+		.my-title Stats
+		.my-details
+			span.my-yellow.my-bold Health
+			span 10
+			br
+			span.my-yellow.my-bold Chakra
+			span 10
+			br
+			span.my-yellow.my-bold Stamina
+			span 10
+			br
+			span.my-yellow.my-bold Speed
+			span 5
+			br
+			span.my-yellow.my-bold Strength
+			span 25
+			br
+	.my-box.my-about
+		.my-title The Player
+		.my-details
+			span.my-violet.my-bold Other Characters
+			span None
+			br
+			span.my-violet.my-bold Faceclaim Name and Series
+			span 
+			br
+			span.my-violet.my-bold Roleplay Sample
+			span= lorem.generateParagraphs(9)
+			br
