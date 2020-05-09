@@ -11,6 +11,6 @@ This is a really basic environment that will plug and play work with anything Pa
 | serve   | Runs a live reload dev server                               | `parcel src/index.pug --out-dir live`                       |
 | open    | Runs a live reload dev server and opens the page in browser | `npm run serve -- --open`                                   |
 | compile | Compiles input to html file with `<style>`                  | `parcel build src/index.pug --out-dir tmp --no-source-maps` |
-| inline  | Transforms `<style>` file to inline styles                  | `juice tmp/index.html index.html                            |
+| inline  | Transforms `<style>` file to inline styles                  | `juice tmp/index.html index.html`                           |
 | build   | Runs compile and then inline                                | `npm run compile && npm run build`                          |
 
