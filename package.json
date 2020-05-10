@@ -6,8 +6,8 @@
   "scripts": {
     "serve": "parcel src/index.pug --out-dir live",
     "open": "npm run serve -- --open",
-    "compile": "parcel build src/index.pug --out-dir tmp --no-source-maps && npm run clean && npm run strip",
-    "clean": "rm tmp/*.css",
+    "compile": "parcel build src/index.pug --out-dir tmp --no-source-maps && npm run strip && npm run clean",
+    "clean": "rm tmp/*.css && rm tmp/index.html",
     "strip": "node scripts/no-newline.js",
     "inline": "juice tmp/stripped.html index.html",
     "build": "npm run compile && npm run inline"
