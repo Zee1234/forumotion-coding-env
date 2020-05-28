@@ -1,0 +1,128 @@
+mobile-row(n)
+	@media screen and (max-width: 480px)
+		grid-row: n
+
+
+
+
+
+
+
+
+
+
+
+
+.my-bold
+	font-weight: bold
+	padding-right: 10px
+
+
+
+
+
+.my-container
+	display: grid
+	grid-template-columns: calc(40% - 7px) calc(10% - 8px) calc(10% - 8px) calc(40% - 7px)
+	grid-gap: 10px
+	color: black
+
+
+
+.my-box
+	border-radius: 25px
+	background: rgb(40,208,76)
+	background: linear-gradient(135deg, rgba(40,208,76,1) 0%, rgba(89,97,237,1) 94%, rgba(196,191,11,1) 100%)
+	padding: 25px
+
+	li::marker
+		content: '▶'
+
+
+
+
+
+.my-title
+	background: rgb(208,40,57)
+	background: linear-gradient(135deg, rgba(208,40,57,1) 0%, rgba(237,89,211,1) 75%, rgba(173,218,15,1) 100%)
+	background-clip: text
+	color: white
+	color: rgba(0,0,0,0)
+	font-size: 24pt
+	line-height: 1em
+
+
+.my-name
+	grid-column: 1/5
+	grid-row: 1
+	font-size: 72pt
+	text-align: center
+	mobile-row 1
+
+.my-image
+	grid-column: 2/4
+	grid-row: 2
+	mobile-row 2
+	align-items: center
+	margin: auto
+
+	& > img
+		object-fit: cover
+		width: 100%
+		max-height: 100%
+
+.my-info
+	grid-column: 1
+	grid-row: 2
+	mobile-row 3
+
+.my-stats
+	grid-column: 4
+	grid-row: 2
+	mobile-row 4
+
+.my-skills
+	grid-column: 1
+	grid-row: 3
+	mobile-row 5
+
+.my-abilities
+	grid-column: 1
+	grid-row: 4
+	mobile-row 6
+
+.my-long-info
+	grid-column: 2/5
+	grid-row: 3/6
+	mobile-row 7
+
+// .my-about
+// 	grid-column: 1/5
+// 	grid-row: 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Mobile niceness
+@media screen and (max-width: 480px)
+	.my-about, .my-stats, .my-ninja-info, .my-long-info, .my-info, .my-name
+		grid-column: 1
+	.my-image
+		grid-column: 1
+	.my-container
+		grid-template-columns: 100%
+	.my-name
+		font-size: 36pt

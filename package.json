@@ -19,5 +19,9 @@
     "juice": "^6.0.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-inliner": "^1.0.14"
+  },
+  "devDependencies": {
+    "pug": "^3.0.0",
+    "stylus": "^0.54.7"
   }
 }
