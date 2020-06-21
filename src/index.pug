@@ -1,0 +1,135 @@
+link(rel="stylesheet", href="index.styl")
+.my-container
+	.my-name
+		.inline-block Ryosei Hozuki
+	.my-info.my-flex-grid.my-box
+		.my-col
+			span.my-bold Age
+			span 21
+		.my-col
+			span.my-bold Gender
+			span Yes
+		.my-col
+			span.my-bold Rank
+			span D Rank (Genin)
+		.my-col
+			span.my-bold Village
+			span Kirigakure
+	.my-importants.my-flex-grid.my-box
+		.my-col
+			span.my-bold Bloodline
+			a(href="https://gladiusrp.forumotion.com/t201-hozuki") Hozuki
+		.my-col
+			span.my-bold Experience
+			span 0/0
+		.my-col
+			span.my-bold Ryo
+			span 25000
+		.my-col
+			span.my-bold Renown
+			span 0
+	.my-skillable.my-box
+		span.my-bold Skills
+		ul.my-ul
+			li Ninjutsu
+			li Bukijutsu
+		span.my-bold Elements
+		ul.my-ul
+			li Water
+	.my-items.my-box
+		label
+			span.my-title Items
+			input.my-spoiler-controller(type="checkbox")
+			.my-item-list.spoiled
+				ul
+	.my-jutsu.my-box
+		label
+			span.my-title S Rank
+			input.my-spoiler-controller(type="checkbox")
+			.my-jutsu-list.spoiled
+				.my-jutsu-element
+					span.my-bold Name
+					span
+					a(href="https://gladiusrp.forumotion.com/t201-hozuki") Hydrification
+					br
+					span.my-bold Rank
+					span S
+					br
+					span.my-bold Power
+					span S
+					br
+					span.my-bold Cost
+					span N/A
+					br
+					span.my-bold Range
+					span User
+					br
+					span.my-bold Skill
+					span Ninjutsu
+					br
+					span.my-bold Element
+					span Suiton
+					br
+					span.my-bold Classification
+					span Hozuki Exclusive
+					br
+					span.my-bold Handseals
+					span N/A
+					br
+					span.my-bold Requirements
+					span Hozuki Bloodline
+					br
+					span.my-bold Description
+					p.
+						The Hydrification Technique is a protean, whole-body technique whereby the user can liquefy their body at will. They are able to maintain their appearance and even fight while doing this. This technique makes it impossible to receive damage from physical attacks and most ninjutsu. From a single hair, to the skin and muscles, everything can be liquefied and solidified at will. Be it to evade an enemy's attack during a short range battle, to infiltrate a structure, or to launch a surprise attack in a liquefied state, this technique boasts a high strategic value. Applying this technique, the user can also modify their body parts for suitable situations or even use the liquid as projectiles. This technique, once learned, is constantly active so that its abilities may be used on very short notice.
+					span.my-bold Drawbacks
+					p.
+						Intense heat will evaporate rather than burn a Hozuki, though the end result is the same: Death. Those who use this technique become highly vulnerable to Raiton element attacks, with any attack from that element temporarily paralyzing them the post it hits. If it's a constant load of Raiton, it can incapacitate the Hōzuki in question indefinitely. All Raiton techniques also count as two tiers higher for damage (Max of X). When knocked unconscious, such as by a raiton technique, the user will turn into a jelly like blob. Raiton of two ranks higher than a Hozuki's constitution will knock them unconscious.Also, they need to drink more water than normal humans to stay hydrated. If they don't take a drink of something at least once every two threads IC, they turn jellyish and get a penalty of one minus to physical stats.
+		label
+			span.my-title A Rank
+			input.my-spoiler-controller(type="checkbox")
+			.my-jutsu-list.spoiled
+		label
+			span.my-title B Rank
+			input.my-spoiler-controller(type="checkbox")
+			.my-jutsu-list.spoiled
+		label
+			span.my-title C Rank
+			input.my-spoiler-controller(type="checkbox")
+			.my-jutsu-list.spoiled
+		label
+			span.my-title D Rank
+			input.my-spoiler-controller(type="checkbox")
+			.my-jutsu-list.spoiled
+		label
+			span.my-title E Rank
+			input.my-spoiler-controller(type="checkbox")
+			.my-jutsu-list.spoiled
+				p All claimable techniques
+	.my-stats.my-box
+		span.my-title Stats
+		br
+		ul.my-no-tag
+			-
+				stats = [
+					['Strength', 'C'],
+					['Constitution', 'D'],
+					['Stamina', 'D'],
+					['Speed', 'D'],
+					['Coodrination', 'C'],
+					['Intelligence', 'D'],
+					['Perception', 'D']
+				]
+			each pair in stats
+				span.my-bold= pair[0]
+				span= pair[1]
+				br
+	.my-unique-abilities.my-box
+		label
+			span.my-title Unique Abilities
+			input.my-spoiler-controller(type="checkbox")
+			.my-jua-list.spoiled
+			
+			span.my-bold One-handed Seals: 
+			span.
+				Ryosei, recognizing a strong desire to practice in the are of weapons, studied from early on to be able to use hand seals with only a single hand. This results in a one tier loss of Coordination for Ryosei's right hand regarding hand seals.
