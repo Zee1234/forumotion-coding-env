@@ -4,14 +4,17 @@
   "description": "A simple environment for coding nice posts for Forumotion (and probably others), uses Pug and Stylus (though Parcel means you can use whatever you want)",
   "main": "index.js",
   "scripts": {
-    "serve": "parcel src/index.pug --out-dir live",
+    "serve": "parcel src/statpage.pug --out-dir live",
     "open": "npm run serve -- --open",
     "compile": "parcel build src/index.pug --out-dir tmp --no-source-maps && npm run strip",
-    "clean": "rm tmp/*.css && rm tmp/index.html",
+    "clean-linux": "rm tmp/*.css && rm tmp/index.html",
     "clean-windows": "del tmp/*.css && del tmp/index.html",
     "strip": "node scripts/no-newline.js",
     "inline": "juice tmp/stripped.html index.html",
-    "build": "npm run compile && npm run inline"
+    "build": "npm run compile && npm run inline",
+    "statpage": "parcel build src/statpage.pug --out-dir tmp --no-source-maps",
+    "siggy": "parcel build src/siggy.pug --out-dir tmp --no-source-maps",
+    "clean": "npm run clean-windows"
   },
   "author": "Athena0219",
   "license": "MIT",

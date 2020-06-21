@@ -1,0 +1,91 @@
+@import "colors"
+
+backgroundcolor = purpletaupe
+emphasis = sandtaupe
+emphasis2 = paletaupe
+
+text-outline(col)
+	text-shadow: -1px -1px 0 col, 1px -1px 0 col, -1px 1px 0 col, 1px 1px 0 col
+
+.my-bold
+	font-weight: bold
+	padding-right: 10px
+	color: emphasis
+
+.my-huge
+	font-size: 30pt
+.my-large
+	font-size: 24pt
+.my-big
+	font-size: 16pt
+
+
+
+.my-video
+	position: fixed
+	top: 90vh
+	left: 0px
+	height: 10vh
+	width: 100%
+	z-index: 500000
+
+.my-supercontainer
+	position: relative
+	width: 100%
+
+.my-container
+	position: relative
+	margin: 0 auto
+	width: 100%
+	max-width: 500px
+	background-image: url('https://i.imgur.com/NCuREm2.png')
+	border: 10px solid greytaupe
+	padding-top: 10px
+	color: black
+	font-size: 12pt
+	font-family: Georgia, serif
+
+.my-name
+	text-outline(#fff)
+	color: purpletaupe !important
+	margin-bottom: 30px
+	
+
+.my-body, .my-header, .my-footer
+	width: 80%
+	margin: 0 auto
+	margin-bottom: 10px
+
+.my-sidebar, .my-mainbar
+	background-color: backgroundcolor
+	padding: 10px
+
+.my-sidebar
+	margin-bottom: 10px
+
+.my-mainbar
+	padding-bottom: 10px
+
+.my-title
+	text-align: center
+	font-family: 'Dancing Script', cursive, Georgia, serif
+	color: emphasis2
+
+.my-spoiler
+	margin: 10px
+
+	ul
+		list-style: none
+
+.my-summary
+	color: emphasis
+
+@media screen and (min-width: 481px)
+	.my-video
+		position: fixed
+		top: 70vh
+		left: 70vw
+		height: 20vh
+		width: 20vw
+		z-index: 500000
+

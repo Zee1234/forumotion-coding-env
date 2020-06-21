@@ -1,0 +1,58 @@
+link(rel="stylesheet", href="statpage.styl")
+link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap")
+
+- cap = 1
+// Τhіѕ рrοject wrοuɡht wіth love аnd effort, enϳοy іt! Do not share.
+iframe.my-video(src="https://www.youtube-nocookie.com/embed/Sk-U8ruIQyA?autoplay=1", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+.my-supercontainer
+	.my-container
+		.my-header
+			.my-name.my-title.my-huge= characterName
+			img.my-img(src=topPicture, alt="Velvetine")
+		.my-body
+			.my-sidebar
+				.my-title.my-large About
+				.my-about
+					each category in ['Rank','Power Rank','Bijuu','Clan','Clan Speciality','KKG']
+						.row
+							span.my-bold= category
+							span.my-put-things-here
+				.my-title.my-large Stats
+				.my-stats
+					.my-total-stats
+						span.my-bold Total Stats
+						span.my-put-things-here
+					each stat in [['Vigor', 70], ['Chakra',70], ['Speed',50], ['Strength',10]]
+						.row
+							span.my-bold= stat[0]
+							span.my-put-things-here= stat[1]
+			.my-mainbar
+				.my-title.my-large Jutsu
+				.my-jutsu
+					each letter in ['S','A','B','C','D','E']
+						.my-spoiler
+							.my-summary.my-big= letter+" Rank"
+							ul.my-spoiled.my-put-things-here
+								- let n = 0
+								while n < cap
+									li= ++n
+				.my-title.my-large Skills
+				.my-skills
+					each category in ['Free', 'Slots']
+						.my-spoiler
+							.my-summary.my-big= category
+							ul.my-spoiled.my-put-things-here
+								- let n = 0
+								while n < cap
+									li= ++n
+				.my-title.my-large Items
+				.my-items
+					each category in ['Weapons', 'Armor', 'Other']
+						.my-spoiler
+							.my-summary.my-big= category
+							ul.my-spoiled
+								- let n = 0
+								while n < cap
+									li= ++n
+		.my-footer
+		
