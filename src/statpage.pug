@@ -1,5 +1,4 @@
 link(rel="stylesheet", href="statpage.styl")
-link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap")
 
 - cap = 1
 // Τhіѕ рrοject wrοuɡht wіth love аnd effort, enϳοy іt! Do not share.
@@ -13,46 +12,50 @@ iframe.my-video(src="https://www.youtube-nocookie.com/embed/Sk-U8ruIQyA?autoplay
 			.my-sidebar
 				.my-title.my-large About
 				.my-about
-					each category in ['Rank','Power Rank','Bijuu','Clan','Clan Speciality','KKG']
+					each category in about
 						.row
-							span.my-bold= category
-							span.my-put-things-here
+							span.my-bold= category.name
+							span.my-put-things-here= category.value
 				.my-title.my-large Stats
 				.my-stats
 					.my-total-stats
 						span.my-bold Total Stats
 						span.my-put-things-here
-					each stat in [['Vigor', 70], ['Chakra',70], ['Speed',50], ['Strength',10]]
+					each stat in stats
 						.row
-							span.my-bold= stat[0]
-							span.my-put-things-here= stat[1]
+							span.my-bold= stat.name
+							span.my-put-things-here= stat.value
 			.my-mainbar
 				.my-title.my-large Jutsu
 				.my-jutsu
-					each letter in ['S','A','B','C','D','E']
+					each rank in jutsu
 						.my-spoiler
-							.my-summary.my-big= letter+" Rank"
+							.my-summary.my-big= rank.rank+" Rank"
 							ul.my-spoiled.my-put-things-here
-								- let n = 0
-								while n < cap
-									li= ++n
+								each jutsu in rank.list
+									li= jutsu
 				.my-title.my-large Skills
 				.my-skills
-					each category in ['Free', 'Slots']
+					each category in skills
 						.my-spoiler
-							.my-summary.my-big= category
+							.my-summary.my-big= category.type
 							ul.my-spoiled.my-put-things-here
-								- let n = 0
-								while n < cap
-									li= ++n
+								each skill in category.list
+									li= skill
 				.my-title.my-large Items
 				.my-items
-					each category in ['Weapons', 'Armor', 'Other']
+					each category in items
 						.my-spoiler
-							.my-summary.my-big= category
+							.my-summary.my-big= category.type
 							ul.my-spoiled
-								- let n = 0
-								while n < cap
-									li= ++n
+								each item in category.list
+									li= item
 		.my-footer
-		
+			.my-threads
+				.my-title.my-large Threads
+				each category in threads
+					.my-spoiler
+						.my-summary.my-big= category.name
+						ul.my-spoiled
+							each item in category.list
+								li= item
